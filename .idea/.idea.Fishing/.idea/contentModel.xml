@@ -265,8 +265,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="FishingRod" t="Include">
-            <e p="FishingRod DebugInput.cs" t="Include" />
+            <e p="FishingLine.cs" t="Include" />
             <e p="FishingRod.cs" t="Include" />
+            <e p="FishingRodDebugInput.cs" t="Include" />
+            <e p="Floater.cs" t="Include" />
           </e>
         </e>
       </e>

@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class FishingRod : MonoBehaviour
 {
+    [SerializeField] Vector3 lineAnchorPos;
+    public Vector3 lineAnchor
+    {
+        get { return lineAnchorPos; }
+        private set { lineAnchorPos = value; }
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
