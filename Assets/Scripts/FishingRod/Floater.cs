@@ -10,7 +10,7 @@ public class Floater : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        fr.lineAnchor;
+        // fr.lineAnchor;
     }
 }
 
