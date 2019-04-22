@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour {
     //holds records of highest weight fish caught
     public Dictionary<string, double> records;
     public FishingLog fishingLog;
-    
+    public List<GameObject> baitList;
+	public GameObject selectedBait;
 	void Awake () {
 		if(instance != null && instance != this) {
 			Destroy(this.gameObject);
