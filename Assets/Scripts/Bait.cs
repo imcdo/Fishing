@@ -16,18 +16,32 @@ public class Bait : MonoBehaviour
     public void hover()
     {
         myRenderer.material = gazedAtMaterial;
-        descriptionInstance = Instantiate(descriptionPrefab, 
-            new Vector3(transform.position.x, transform.position.y, transform.position.z + 1), 
+        descriptionInstance = Instantiate(descriptionPrefab,
+            new Vector3(transform.position.x, transform.position.y + 1, transform.position.z),
             transform.rotation);
-            
+        descriptionInstance.transform.parent = gameObject.transform;
     }
 
-    public void exit() {
+    public void exit()
+    {
         myRenderer.material = inactiveMaterial;
         Destroy(descriptionInstance);
         Debug.Log("exit");
     }
 
+    public void click()
+    {
+        GameManager.Instance.baitList.Remove(gameObject);
+        if (GameManager.Instance.selectedBait != null)
+        {
+            GameManager.Instance.baitList.Add(GameManager.Instance.selectedBait);
+            GameManager.Instance.selectedBait.SetActive(true);
+        }
+
+        GameManager.Instance.selectedBait = gameObject;
+        GameManager.Instance.selectedBait.SetActive(false);
+        exit();
+    }
 
     private void Start()
     {
