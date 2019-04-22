@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     public Dictionary<string, double> records;
     public FishingLog fishingLog;
     public List<GameObject> baitList;
+	public List<string> fishList;
 	public GameObject selectedBait;
 	void Awake () {
 		if(instance != null && instance != this) {
@@ -23,6 +24,10 @@ public class GameManager : MonoBehaviour {
 			instance = this;
 		}
 		records = new Dictionary<string, double>();
+		foreach (string fish in fishList) {
+			records.Add(fish, 0);
+		}
+		
         fishingLog = GameObject.FindGameObjectWithTag("log").GetComponent<FishingLog>();
 	}
 
