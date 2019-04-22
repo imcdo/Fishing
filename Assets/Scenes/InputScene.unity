@@ -649,6 +649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 839383790}
+  - component: {fileID: 839383791}
   m_Layer: 0
   m_Name: Journal
   m_TagString: Untagged
@@ -675,6 +676,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &839383791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839383789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466d37a28e535194daaf21ac53a599ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPageIndex: 0
+  pagePrefabs:
+  - {fileID: 2878105711793170798, guid: a4b40e3de24941e49bbe58c020307f33, type: 3}
+  currentPageInstance: {fileID: 0}
+  pagePosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &877364777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1892,7 +1910,7 @@ GameObject:
   - component: {fileID: 1469613458108962803}
   - component: {fileID: 1469613458108962804}
   m_Layer: 5
-  m_Name: Bass Page
+  m_Name: Trout Page
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1939,7 +1957,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BASS
+  m_Text: TROUT
 --- !u!224 &1469613458343711033
 RectTransform:
   m_ObjectHideFlags: 0
