@@ -883,7 +883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1270036488
 Transform:
   m_ObjectHideFlags: 0
@@ -891,15 +891,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270036487}
-  m_LocalRotation: {x: -0, y: 0.3607008, z: -0, w: 0.9326817}
-  m_LocalPosition: {x: -0.46, y: 0, z: 1.47}
+  m_LocalRotation: {x: 0.0048570232, y: 0.36069587, z: -0.0018783829, w: 0.932669}
+  m_LocalPosition: {x: -0.45995203, y: 0.013669783, z: 1.4700525}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 1684904333}
   - {fileID: 1100280921}
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 42.287003, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.597, y: 42.287003, z: 0}
 --- !u!1001 &1332062878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -910,6 +910,10 @@ PrefabInstance:
     - target: {fileID: 761381335, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
       propertyPath: m_Name
       value: GvrEventSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 766346198, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010917943472, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -942,10 +946,6 @@ PrefabInstance:
     - target: {fileID: 4000010917943472, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
       propertyPath: m_RootOrder
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 766346198, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
