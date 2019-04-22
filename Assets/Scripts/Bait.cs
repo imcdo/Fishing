@@ -12,6 +12,7 @@ public class Bait : MonoBehaviour
     public GameObject descriptionPrefab;
 
     public GameObject descriptionInstance;
+
     public void hover()
     {
         myRenderer.material = gazedAtMaterial;
