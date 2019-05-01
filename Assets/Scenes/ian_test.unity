@@ -522,6 +522,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FollowRodBody
       objectReference: {fileID: 0}
+    - target: {fileID: 1585829791919173225, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1585829792577999077, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52,
         type: 3}
       propertyPath: m_TagString
