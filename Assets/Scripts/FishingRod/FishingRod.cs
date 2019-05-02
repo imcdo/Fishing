@@ -39,7 +39,7 @@ public class FishingRod : MonoBehaviour
         for (int i = 0; i < NUM_ROD_POINTS; i++)
         {
             rodPoints[i] = startRod + endRod  * i / (NUM_ROD_POINTS - 1);
-            Debug.Log(rodPoints[i]);
+//            Debug.Log(rodPoints[i]);
         }
     }
 
@@ -67,36 +67,34 @@ public class FishingRod : MonoBehaviour
         Matrix4x4 ltwRigid = RigidRod.transform .localToWorldMatrix;
         for (int i = 0; i < rodPoints.Length; i++)
         {
-            Vector4 worldPointRigid =  ltwRigid  * new Vector4(rodPoints[i].x, rodPoints[i].y, rodPoints[i].z, 1);
-            // Vector4 worldPointFollow = ltwFollow * new Vector4(rodPoints[i].x, rodPoints[i].y, rodPoints[i].z, 1);
-            Vector4 worldPointFollow = worldPointRigid;
-            // Vector4 worldPointRigid = worldPointFollow;
+            Vector4 worldPointRigid =  ltwRigid * new Vector4(rodPoints[i].x/10.0f, rodPoints[i].y/10.0f, rodPoints[i].z/10.0f, 1);
+            Vector4 worldPointFollow = ltwFollow * new Vector4(rodPoints[i].x, rodPoints[i].y, rodPoints[i].z, 1);
+//            Vector4 worldPointFollow = worldPointRigid;
+//            Vector4 worldPointRigid = worldPointFollow;
 
-            float w = RodEquation((1.0f * i) / rodPoints.Length);
-
-
+            float w = RodEquation((1.0f * i) / (rodPoints.Length -1));
+//            Debug.Log(w);
+            
             Vector3 worldPoint = (1-w) * new Vector3(worldPointRigid.x, worldPointRigid.y, worldPointRigid.z) +
                 (w) * new Vector3(worldPointFollow.x, worldPointFollow.y, worldPointFollow.z);
-            Debug.Log(w + " " + worldPointRigid + " " + worldPointFollow + " " + worldPoint);
+//            Debug.Log(w + " " + worldPointRigid + " " + worldPointFollow + " " + worldPoint);
 
-            cubes[i].transform.SetPositionAndRotation(
-                worldPoint, FollowRod.transform.rotation);
+            cubes[i].transform.SetPositionAndRotation(worldPoint, FollowRod.transform.rotation);
         }
     }
 
 
-    // returns the weight twords bendy/follow rod
+    // returns the weight towards bendy/follow rod
     float RodEquation(float t)
     {
         // NOTE w is a weight between 0 - 1
         // w = t^2(3L-t)/2L^3
-        // L = length of beam, TODO: get it to the actual transorm length
 
         float tSq = Mathf.Pow(t, 2);
-        float Lcb = Mathf.Pow(L, 3);
 
-        float w = tSq *(3 * L - t);
-        w /= 2 * Lcb;
+        float w = tSq *(3  - t);
+        w /= 2;
+        Debug.Log(t + " " + w);
         return w;
     }
 }
