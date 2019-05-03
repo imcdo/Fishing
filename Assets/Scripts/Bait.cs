@@ -10,7 +10,7 @@ public class Bait : MonoBehaviour
     public Material gazedAtMaterial;
     private Renderer myRenderer;
     public GameObject descriptionPrefab;
-
+    public string baitString;
     public GameObject descriptionInstance;
 
     public void hover()
@@ -40,6 +40,7 @@ public class Bait : MonoBehaviour
 
         GameManager.Instance.selectedBait = gameObject;
         GameManager.Instance.selectedBait.SetActive(false);
+        GameManager.Instance.selectedBaitString = baitString;
         exit();
     }
 

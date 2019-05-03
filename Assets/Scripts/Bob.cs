@@ -20,12 +20,6 @@ public class Bob : MonoBehaviour
         Vector3 c = bc.center;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "water") {
