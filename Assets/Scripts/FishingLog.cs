@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class FishingLog : MonoBehaviour
 {
+    public bool hovered = false;
     public int currentPageIndex;
     public List<GameObject> pagePrefabs;
     public GameObject currentPageInstance;
-    public Vector3 pagePosition = new Vector3(0, 0, 0);
     void Start()
     {
-        pagePosition = transform.position;
         currentPageIndex = 0;
         changePage(currentPageIndex);
     }
@@ -19,13 +18,13 @@ public class FishingLog : MonoBehaviour
     {
         currentPageIndex = index;
         Destroy(currentPageInstance);
-        currentPageInstance = Instantiate(pagePrefabs[currentPageIndex], pagePosition, Quaternion.identity);
+        currentPageInstance = Instantiate(pagePrefabs[currentPageIndex], transform.position + transform.rotation * new Vector3(0, 0, -.125f), transform.rotation);
         currentPageInstance.transform.parent = gameObject.transform;
     }
 
     void Update()
     {
-        if (GvrControllerInput.ClickButtonDown)
+        if (GvrControllerInput.ClickButtonDown && hovered)
         {
             Vector2 touchPos = GvrControllerInput.TouchPos;
             if (touchPos.x < .5 && currentPageIndex > 0)
@@ -39,5 +38,15 @@ public class FishingLog : MonoBehaviour
                 changePage(currentPageIndex);
             }
         }
+    }
+
+    public void hover()
+    {
+        hovered = true;
+    }
+
+    public void exit()
+    {
+        hovered = false;
     }
 }
