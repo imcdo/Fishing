@@ -48,7 +48,7 @@ public class Bob : MonoBehaviour
                 }
             }
             float percent = count / (regions * regions * regions);
-            Debug.Log(percent);
+            // Debug.Log(percent);
             if(percent > 0) {
                 Vector3 center = sum/count;
                 Vector3 forceup = new Vector3(0, buoyancy * percent, 0);

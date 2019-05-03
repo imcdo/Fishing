@@ -24,7 +24,7 @@ public class FishingLine : MonoBehaviour
     [HideInInspector] public Vector3 firstPoint;    
     private float prevLineLength;
 
-
+    [SerializeField] GameObject floater;
 
     private class LineParticle
     {
@@ -36,6 +36,7 @@ public class FishingLine : MonoBehaviour
     private List<LineParticle> particles;
     private GameObject[] cubes;
 
+    private float timestep;
    
     
     private void Awake()
@@ -126,10 +127,12 @@ public class FishingLine : MonoBehaviour
             Verlet(particles[i], Time.deltaTime);
             PoleConstraint(particles[i - 1], particles[i],  lineLength/ (1.0f * numLineParticles) );
         }
+        particles[numLineParticles - 1].acc = 10 * gravity;
 
         particles[0].pos = endPos;
 
         prevLineLength = lineLength;
+        timestep =Time.deltaTime;
     }
     
     private void Verlet( LineParticle p, float dt)
@@ -148,5 +151,11 @@ public class FishingLine : MonoBehaviour
         float diff = (deltaLength - restLength)/deltaLength;
         p1.pos += delta*diff*dampFactor;
         p2.pos -= delta*diff*dampFactor;
+    }
+    public Vector3 getTipVelocity()
+    {
+        Debug.Log(timestep + " " + particles[particles.Count - 1].pos + " " + (particles[particles.Count - 1].pos - particles[particles.Count - 1].oldPos));
+        
+        return (particles[particles.Count - 1].pos - particles[particles.Count - 1].oldPos) ;
     }
 }

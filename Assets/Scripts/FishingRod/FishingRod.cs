@@ -19,6 +19,7 @@ public class FishingRod : MonoBehaviour
     private const int NUM_ROD_POINTS = 6;
     Vector3[] rodPoints;
 
+    private Vector3 startpos;
     private FishingLine fl;
     float L;
 
@@ -36,6 +37,8 @@ public class FishingRod : MonoBehaviour
         
         RigidRod = transform.Find("handle").Find("RigidRod").gameObject;
         FollowRod = transform.Find("FollowRod").gameObject;
+
+        startpos = transform.position;
 
         ConfigurableJoint[] joints = FollowRod.GetComponents<ConfigurableJoint>();
 
@@ -79,12 +82,28 @@ public class FishingRod : MonoBehaviour
         // TODO: temp
         controller = GameObject.FindWithTag("Controller");
 
-        pickedup = controller != null;
+        pickedup = pickedup && controller.activeInHierarchy;
         if (pickedup)
         {
             Transform handle = RigidRod.transform.parent;
             handle.position = controller.transform.position;
             handle.rotation = controller.transform.rotation;
+
+
+            Vector2 touchPos = GvrControllerInput.TouchPos;
+            if (Input.GetKey("z") ||
+                (GvrControllerInput.ClickButton && touchPos.y > .5))
+            {
+                reel(Time.deltaTime);
+            }
+            if (Input.GetKey("x") ||
+                (GvrControllerInput.ClickButton && touchPos.y <= .5))
+            {
+                release(Time.deltaTime);
+            }
+        } else
+        {
+            transform.position = startpos;
         }
         
         Matrix4x4 ltwFollow = FollowRod.transform.localToWorldMatrix;
@@ -102,15 +121,6 @@ public class FishingRod : MonoBehaviour
             
             if (i == rodPoints.Length - 1) fl.firstPoint = worldPoint;
             cubes[i].transform.SetPositionAndRotation(worldPoint, FollowRod.transform.rotation);
-        }
-
-        if (Input.GetKey("z"))
-        {
-            reel(Time.deltaTime);
-        }
-        if (Input.GetKey("x"))
-        {
-            release(Time.deltaTime);
         }
     }
 
@@ -135,8 +145,10 @@ public class FishingRod : MonoBehaviour
 
     void release(float amount)
     {
-        amount *= releaseSpeed;
-
-        fl.lineLength += amount;
+        // amount *= releaseSpeed;
+        Debug.Log(fl.getTipVelocity() + " " + Vector3.Magnitude(fl.getTipVelocity()));
+        fl.lineLength += Vector3.Magnitude(fl.getTipVelocity());
     }
+
+    public void grab() { pickedup = true;  }
 }
