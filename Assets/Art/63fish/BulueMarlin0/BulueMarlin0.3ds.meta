@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: afd1383e89b5b6e4bb1ec149aa75e7eb
+timeCreated: 1518385435
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BACK01L
+    100002: BACK01TRNL
+    100004: BACK02L
+    100006: BACK02TRNL
+    100008: BACK03L
+    100010: BACK03TRNL
+    100012: BODY01L
+    100014: BODY01TRNL
+    100016: //RootNode
+    100018: BUST01L
+    100020: BUST01R
+    100022: BUST01TRNL
+    100024: BUST01TRNR
+    100026: EYE01L
+    100028: EYE01R
+    100030: EYE01TRNL
+    100032: EYE01TRNR
+    100034: HIP01L
+    100036: HIP01TRNL
+    100038: HIP02L
+    100040: HIP02TRNL
+    100042: object
+    100044: object1
+    100046: object10
+    100048: object11
+    100050: object12
+    100052: object13
+    100054: object14
+    100056: object15
+    100058: object16
+    100060: object17
+    100062: object2
+    100064: object3
+    100066: object4
+    100068: object5
+    100070: object6
+    100072: object7
+    100074: object8
+    100076: object9
+    100078: TAIL01L
+    100080: TAIL01TRNL
+    100082: TAIL02L
+    100084: TAIL02R
+    100086: TAIL02TRNL
+    100088: TAIL02TRNR
+    100090: TAIL03L
+    100092: TAIL03R
+    100094: TAIL03TRNL
+    100096: TAIL03TRNR
+    100098: WAIST01L
+    100100: WAIST01R
+    100102: WAIST01TR1
+    100104: WAIST01TRN
+    400000: BACK01L
+    400002: BACK01TRNL
+    400004: BACK02L
+    400006: BACK02TRNL
+    400008: BACK03L
+    400010: BACK03TRNL
+    400012: BODY01L
+    400014: BODY01TRNL
+    400016: //RootNode
+    400018: BUST01L
+    400020: BUST01R
+    400022: BUST01TRNL
+    400024: BUST01TRNR
+    400026: EYE01L
+    400028: EYE01R
+    400030: EYE01TRNL
+    400032: EYE01TRNR
+    400034: HIP01L
+    400036: HIP01TRNL
+    400038: HIP02L
+    400040: HIP02TRNL
+    400042: object
+    400044: object1
+    400046: object10
+    400048: object11
+    400050: object12
+    400052: object13
+    400054: object14
+    400056: object15
+    400058: object16
+    400060: object17
+    400062: object2
+    400064: object3
+    400066: object4
+    400068: object5
+    400070: object6
+    400072: object7
+    400074: object8
+    400076: object9
+    400078: TAIL01L
+    400080: TAIL01TRNL
+    400082: TAIL02L
+    400084: TAIL02R
+    400086: TAIL02TRNL
+    400088: TAIL02TRNR
+    400090: TAIL03L
+    400092: TAIL03R
+    400094: TAIL03TRNL
+    400096: TAIL03TRNR
+    400098: WAIST01L
+    400100: WAIST01R
+    400102: WAIST01TR1
+    400104: WAIST01TRN
+    2100000: Material
+    2300000: object
+    2300002: object10
+    2300004: object11
+    2300006: object12
+    2300008: object13
+    2300010: object14
+    2300012: object15
+    2300014: object16
+    2300016: object17
+    2300018: object2
+    2300020: object3
+    2300022: object4
+    2300024: object5
+    2300026: object6
+    2300028: object7
+    2300030: object8
+    2300032: object9
+    3300000: object
+    3300002: object10
+    3300004: object11
+    3300006: object12
+    3300008: object13
+    3300010: object14
+    3300012: object15
+    3300014: object16
+    3300016: object17
+    3300018: object2
+    3300020: object3
+    3300022: object4
+    3300024: object5
+    3300026: object6
+    3300028: object7
+    3300030: object8
+    3300032: object9
+    4300000: object17
+    4300002: object16
+    4300004: object15
+    4300006: object14
+    4300008: object13
+    4300010: object12
+    4300012: object11
+    4300014: object10
+    4300016: object9
+    4300018: object8
+    4300020: object7
+    4300022: object6
+    4300024: object5
+    4300026: object4
+    4300028: object3
+    4300030: object2
+    4300032: object
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

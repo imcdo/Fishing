@@ -1,0 +1,1108 @@
+fileFormatVersion: 2
+guid: ee20b9bae040ffd4bb9fd9a85c519252
+timeCreated: 1517358550
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000600100006101000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f010000900100009101000092010000930100009401000095010000960100009701000098010000990100009a0100009b0100009c0100009d0100009e0100009f010000a0010000a1010000a2010000a3010000a4010000a5010000a6010000a7010000a8010000a9010000aa010000ab010000ac010000ad010000ae010000af010000b0010000b1010000b2010000b3010000b4010000b5010000b6010000b7010000b8010000b9010000ba010000bb010000bc010000bd010000be010000bf010000c0010000c1010000c2010000c3010000c4010000c5010000c6010000c7010000c8010000c9010000ca010000cb010000cc010000cd010000ce010000cf010000d0010000d1010000d2010000
+  assetHash:
+    serializedVersion: 2
+    Hash: 5fec45e678590f4bebec34524a33cb8e
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.35877463, y: 1.0369021, z: -4.2803407}
+      lookAt: {x: 1.5015807, y: 1.9948455, z: 6.015199}
+      up: {x: -0.010158901, y: 0.9957513, z: -0.091521546}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 16109_4a
+    100002: centre
+    100004: Component#1
+    100006: Component#1 1
+    100008: Component#1 2
+    100010: Component#1 3
+    100012: Component#1 4
+    100014: Component#1 5
+    100016: Component#1 6
+    100018: Component#1 7
+    100020: Component#11
+    100022: Component#11 1
+    100024: Component#11 2
+    100026: Component#11 3
+    100028: Component#11 4
+    100030: Component#11 5
+    100032: Component#11 6
+    100034: Component#11 7
+    100036: Component#12
+    100038: Component#12 1
+    100040: Component#12 2
+    100042: Component#12 3
+    100044: Component#12 4
+    100046: Component#12 5
+    100048: Component#12 6
+    100050: Component#12 7
+    100052: Component#13
+    100054: Component#13 1
+    100056: Component#13 2
+    100058: Component#13 3
+    100060: Component#13 4
+    100062: Component#13 5
+    100064: Component#13 6
+    100066: Component#13 7
+    100068: Component#14
+    100070: Component#14 1
+    100072: Component#14 2
+    100074: Component#14 3
+    100076: Component#14 4
+    100078: Component#14 5
+    100080: Component#14 6
+    100082: Component#14 7
+    100084: Component#15
+    100086: Component#15 1
+    100088: Component#15 2
+    100090: Component#15 3
+    100092: Component#15 4
+    100094: Component#15 5
+    100096: Component#15 6
+    100098: Component#15 7
+    100100: Component#16
+    100102: Component#16 1
+    100104: Component#16 2
+    100106: Component#16 3
+    100108: Component#17
+    100110: Component#17 1
+    100112: Component#17 2
+    100114: Component#17 3
+    100116: Component#18
+    100118: Component#18 1
+    100120: Component#18 2
+    100122: Component#2
+    100124: Component#2 1
+    100126: Component#2 2
+    100128: Component#2 3
+    100130: Component#2 4
+    100132: Component#2 5
+    100134: Component#2 6
+    100136: Component#2 7
+    100138: Component#3
+    100140: Component#3 1
+    100142: Component#3 2
+    100144: Component#3 3
+    100146: Component#3 4
+    100148: Component#3 5
+    100150: Component#3 6
+    100152: Component#3 7
+    100154: Component#5
+    100156: Component#5 1
+    100158: Component#5 2
+    100160: Component#5 3
+    100162: Component#5 4
+    100164: Component#5 5
+    100166: Component#5 6
+    100168: Component#5 7
+    100170: Component#8
+    100172: Component#8 1
+    100174: Component#8 2
+    100176: Component#8 3
+    100178: Component#8 4
+    100180: Component#8 5
+    100182: Component#8 6
+    100184: Component#8 7
+    100186: cooler box
+    100188: corner support
+    100190: corner support 1
+    100192: corner support 2
+    100194: corner support 3
+    100196: Fishing Rod and Reel
+    100198: Fishing Rod and Reel 1
+    100200: Fishing Rod and Reel 2
+    100202: Fishing Rod and Reel 3
+    100204: Fishing Rod and Reel 4
+    100206: Fishing Rod and Reel 5
+    100208: Fishing Rod and Reel 6
+    100210: Fishing Rod and Reel 7
+    100212: Fishing Rod and Reel 8
+    100214: Group 10
+    100216: Group 101
+    100218: Group 103
+    100220: Group 105
+    100222: Group 107
+    100224: Group 115
+    100226: Group 116
+    100228: Group 12
+    100230: Group 138
+    100232: Group 139
+    100234: Group 142
+    100236: Group 143
+    100238: Group 166
+    100240: Group 168
+    100242: Group 170
+    100244: Group 172
+    100246: Group 174
+    100248: Group 176
+    100250: Group 178
+    100252: Group 180
+    100254: Group 182
+    100256: Group 184
+    100258: Group 186
+    100260: Group 198
+    100262: Group 199
+    100264: Group 2
+    100266: Group 221
+    100268: Group 222
+    100270: Group 225
+    100272: Group 226
+    100274: Group 249
+    100276: Group 251
+    100278: Group 253
+    100280: Group 255
+    100282: Group 257
+    100284: Group 259
+    100286: Group 261
+    100288: Group 263
+    100290: Group 265
+    100292: Group 267
+    100294: Group 269
+    100296: Group 275
+    100298: Group 277
+    100300: Group 279
+    100302: Group 281
+    100304: Group 283
+    100306: Group 36
+    100308: Group 361
+    100310: Group 362
+    100312: Group 364
+    100314: Group 366
+    100316: Group 37
+    100318: Group 379
+    100320: Group 380
+    100322: Group 382
+    100324: Group 384
+    100326: Group 387
+    100328: Group 388
+    100330: Group 390
+    100332: Group 392
+    100334: Group 395
+    100336: Group 396
+    100338: Group 398
+    100340: Group 4
+    100342: Group 400
+    100344: Group 409
+    100346: Group 411
+    100348: Group 413
+    100350: Group 415
+    100352: Group 417
+    100354: Group 419
+    100356: Group 421
+    100358: Group 423
+    100360: Group 425
+    100362: Group 427
+    100364: Group 429
+    100366: Group 59
+    100368: Group 6
+    100370: Group 60
+    100372: Group 63
+    100374: Group 64
+    100376: Group 7
+    100378: Group 87
+    100380: Group 89
+    100382: Group 9
+    100384: Group 91
+    100386: Group 93
+    100388: Group 95
+    100390: Group 97
+    100392: Group 99
+    100394: handheld
+    100396: handheld f
+    100398: //RootNode
+    100400: knob
+    100402: knob 1
+    100404: knob 10
+    100406: knob 11
+    100408: knob 12
+    100410: knob 13
+    100412: knob 14
+    100414: knob 15
+    100416: knob 16
+    100418: knob 17
+    100420: knob 18
+    100422: knob 19
+    100424: knob 2
+    100426: knob 20
+    100428: knob 21
+    100430: knob 3
+    100432: knob 4
+    100434: knob 5
+    100436: knob 6
+    100438: knob 7
+    100440: knob 8
+    100442: knob 9
+    100444: left
+    100446: nozzle
+    100448: 'object #1'
+    100450: 'object #11'
+    100452: 'object #11 1'
+    100454: 'object #14'
+    100456: 'object #17'
+    100458: 'object #2'
+    100460: 'object #3'
+    100462: 'object #5'
+    100464: 'object #5 1'
+    100466: 'object #7'
+    100468: 'object #8'
+    100470: 'object #9'
+    100472: Plano Model 3449 Box
+    100474: Plano Model 3449 Box 1
+    100476: Plano Model 3449 Box 2
+    100478: Plano Model 3449 Box 3
+    100480: Plano Model 3449 Tackle Box
+    100482: Plano Model 3449 Tackle Box 1
+    100484: Plano Model 3449 Tackle Box 2
+    100486: right
+    100488: Spincaster Rod
+    100490: Spincaster Rod 1
+    100492: Spincaster Rod 2
+    100494: Spincaster Rod 3
+    100496: Spincaster Rod 4
+    100498: Spincaster Rod 5
+    100500: support
+    100502: support 1
+    100504: support 10
+    100506: support 11
+    100508: support 12
+    100510: support 13
+    100512: support 14
+    100514: support 15
+    100516: support 2
+    100518: support 3
+    100520: support 4
+    100522: support 5
+    100524: support 6
+    100526: support 7
+    100528: support 8
+    100530: support 9
+    100532: wheels
+    100534: wheels 1
+    100536: wheels 2
+    100538: wheels 3
+    400000: 16109_4a
+    400002: centre
+    400004: Component#1
+    400006: Component#1 1
+    400008: Component#1 2
+    400010: Component#1 3
+    400012: Component#1 4
+    400014: Component#1 5
+    400016: Component#1 6
+    400018: Component#1 7
+    400020: Component#11
+    400022: Component#11 1
+    400024: Component#11 2
+    400026: Component#11 3
+    400028: Component#11 4
+    400030: Component#11 5
+    400032: Component#11 6
+    400034: Component#11 7
+    400036: Component#12
+    400038: Component#12 1
+    400040: Component#12 2
+    400042: Component#12 3
+    400044: Component#12 4
+    400046: Component#12 5
+    400048: Component#12 6
+    400050: Component#12 7
+    400052: Component#13
+    400054: Component#13 1
+    400056: Component#13 2
+    400058: Component#13 3
+    400060: Component#13 4
+    400062: Component#13 5
+    400064: Component#13 6
+    400066: Component#13 7
+    400068: Component#14
+    400070: Component#14 1
+    400072: Component#14 2
+    400074: Component#14 3
+    400076: Component#14 4
+    400078: Component#14 5
+    400080: Component#14 6
+    400082: Component#14 7
+    400084: Component#15
+    400086: Component#15 1
+    400088: Component#15 2
+    400090: Component#15 3
+    400092: Component#15 4
+    400094: Component#15 5
+    400096: Component#15 6
+    400098: Component#15 7
+    400100: Component#16
+    400102: Component#16 1
+    400104: Component#16 2
+    400106: Component#16 3
+    400108: Component#17
+    400110: Component#17 1
+    400112: Component#17 2
+    400114: Component#17 3
+    400116: Component#18
+    400118: Component#18 1
+    400120: Component#18 2
+    400122: Component#2
+    400124: Component#2 1
+    400126: Component#2 2
+    400128: Component#2 3
+    400130: Component#2 4
+    400132: Component#2 5
+    400134: Component#2 6
+    400136: Component#2 7
+    400138: Component#3
+    400140: Component#3 1
+    400142: Component#3 2
+    400144: Component#3 3
+    400146: Component#3 4
+    400148: Component#3 5
+    400150: Component#3 6
+    400152: Component#3 7
+    400154: Component#5
+    400156: Component#5 1
+    400158: Component#5 2
+    400160: Component#5 3
+    400162: Component#5 4
+    400164: Component#5 5
+    400166: Component#5 6
+    400168: Component#5 7
+    400170: Component#8
+    400172: Component#8 1
+    400174: Component#8 2
+    400176: Component#8 3
+    400178: Component#8 4
+    400180: Component#8 5
+    400182: Component#8 6
+    400184: Component#8 7
+    400186: cooler box
+    400188: corner support
+    400190: corner support 1
+    400192: corner support 2
+    400194: corner support 3
+    400196: Fishing Rod and Reel
+    400198: Fishing Rod and Reel 1
+    400200: Fishing Rod and Reel 2
+    400202: Fishing Rod and Reel 3
+    400204: Fishing Rod and Reel 4
+    400206: Fishing Rod and Reel 5
+    400208: Fishing Rod and Reel 6
+    400210: Fishing Rod and Reel 7
+    400212: Fishing Rod and Reel 8
+    400214: Group 10
+    400216: Group 101
+    400218: Group 103
+    400220: Group 105
+    400222: Group 107
+    400224: Group 115
+    400226: Group 116
+    400228: Group 12
+    400230: Group 138
+    400232: Group 139
+    400234: Group 142
+    400236: Group 143
+    400238: Group 166
+    400240: Group 168
+    400242: Group 170
+    400244: Group 172
+    400246: Group 174
+    400248: Group 176
+    400250: Group 178
+    400252: Group 180
+    400254: Group 182
+    400256: Group 184
+    400258: Group 186
+    400260: Group 198
+    400262: Group 199
+    400264: Group 2
+    400266: Group 221
+    400268: Group 222
+    400270: Group 225
+    400272: Group 226
+    400274: Group 249
+    400276: Group 251
+    400278: Group 253
+    400280: Group 255
+    400282: Group 257
+    400284: Group 259
+    400286: Group 261
+    400288: Group 263
+    400290: Group 265
+    400292: Group 267
+    400294: Group 269
+    400296: Group 275
+    400298: Group 277
+    400300: Group 279
+    400302: Group 281
+    400304: Group 283
+    400306: Group 36
+    400308: Group 361
+    400310: Group 362
+    400312: Group 364
+    400314: Group 366
+    400316: Group 37
+    400318: Group 379
+    400320: Group 380
+    400322: Group 382
+    400324: Group 384
+    400326: Group 387
+    400328: Group 388
+    400330: Group 390
+    400332: Group 392
+    400334: Group 395
+    400336: Group 396
+    400338: Group 398
+    400340: Group 4
+    400342: Group 400
+    400344: Group 409
+    400346: Group 411
+    400348: Group 413
+    400350: Group 415
+    400352: Group 417
+    400354: Group 419
+    400356: Group 421
+    400358: Group 423
+    400360: Group 425
+    400362: Group 427
+    400364: Group 429
+    400366: Group 59
+    400368: Group 6
+    400370: Group 60
+    400372: Group 63
+    400374: Group 64
+    400376: Group 7
+    400378: Group 87
+    400380: Group 89
+    400382: Group 9
+    400384: Group 91
+    400386: Group 93
+    400388: Group 95
+    400390: Group 97
+    400392: Group 99
+    400394: handheld
+    400396: handheld f
+    400398: //RootNode
+    400400: knob
+    400402: knob 1
+    400404: knob 10
+    400406: knob 11
+    400408: knob 12
+    400410: knob 13
+    400412: knob 14
+    400414: knob 15
+    400416: knob 16
+    400418: knob 17
+    400420: knob 18
+    400422: knob 19
+    400424: knob 2
+    400426: knob 20
+    400428: knob 21
+    400430: knob 3
+    400432: knob 4
+    400434: knob 5
+    400436: knob 6
+    400438: knob 7
+    400440: knob 8
+    400442: knob 9
+    400444: left
+    400446: nozzle
+    400448: 'object #1'
+    400450: 'object #11'
+    400452: 'object #11 1'
+    400454: 'object #14'
+    400456: 'object #17'
+    400458: 'object #2'
+    400460: 'object #3'
+    400462: 'object #5'
+    400464: 'object #5 1'
+    400466: 'object #7'
+    400468: 'object #8'
+    400470: 'object #9'
+    400472: Plano Model 3449 Box
+    400474: Plano Model 3449 Box 1
+    400476: Plano Model 3449 Box 2
+    400478: Plano Model 3449 Box 3
+    400480: Plano Model 3449 Tackle Box
+    400482: Plano Model 3449 Tackle Box 1
+    400484: Plano Model 3449 Tackle Box 2
+    400486: right
+    400488: Spincaster Rod
+    400490: Spincaster Rod 1
+    400492: Spincaster Rod 2
+    400494: Spincaster Rod 3
+    400496: Spincaster Rod 4
+    400498: Spincaster Rod 5
+    400500: support
+    400502: support 1
+    400504: support 10
+    400506: support 11
+    400508: support 12
+    400510: support 13
+    400512: support 14
+    400514: support 15
+    400516: support 2
+    400518: support 3
+    400520: support 4
+    400522: support 5
+    400524: support 6
+    400526: support 7
+    400528: support 8
+    400530: support 9
+    400532: wheels
+    400534: wheels 1
+    400536: wheels 2
+    400538: wheels 3
+    2100000: _defaultMat
+    2100002: '[0048_PaleGoldenrod]'
+    2100004: Plaster
+    2100006: '[Wood_Cherry_Original]'
+    2100008: '[Wood_Bamboo_Medium]1'
+    2100010: '[Color_000]'
+    2100012: _CorrogateShiny_1
+    2100014: '[Fencing_Wood_Old]'
+    2100016: _1
+    2100018: '[Blinds_Roman_Hobbled_Blue]'
+    2100020: '[Stone_Masonry_Multi]'
+    2100022: '[Translucent_Glass_Blue]'
+    2100024: '[Color_H05]'
+    2100026: _35
+    2100028: _34
+    2100030: _16
+    2100032: _Wavy Lines Horizontal_
+    2100034: _Concrete-rough_
+    2100036: _Concrete-rough_1
+    2100038: _Wavy Lines Horizontal_2
+    2100040: _14
+    2100042: Wood_OSB
+    2100044: _15
+    2100046: Sketchy_Lines_Wavy_45_A
+    2100048: Metal_Aluminum_Anodized
+    2100050: Translucent_Glass_Gray
+    2100052: _12
+    2100054: _Charcoal_
+    2100056: _Silver_
+    2100058: '[Metal_Corrogated_Shiny]1'
+    2100060: _DimGray_
+    2300000: Component#1
+    2300002: Component#1 1
+    2300004: Component#1 2
+    2300006: Component#1 3
+    2300008: Component#1 4
+    2300010: Component#1 5
+    2300012: Component#1 6
+    2300014: Component#1 7
+    2300016: Component#11
+    2300018: Component#11 1
+    2300020: Component#11 2
+    2300022: Component#11 3
+    2300024: Component#11 4
+    2300026: Component#11 5
+    2300028: Component#11 6
+    2300030: Component#11 7
+    2300032: Component#12
+    2300034: Component#12 1
+    2300036: Component#12 2
+    2300038: Component#12 3
+    2300040: Component#12 4
+    2300042: Component#12 5
+    2300044: Component#12 6
+    2300046: Component#12 7
+    2300048: Component#13
+    2300050: Component#13 1
+    2300052: Component#13 2
+    2300054: Component#13 3
+    2300056: Component#13 4
+    2300058: Component#13 5
+    2300060: Component#13 6
+    2300062: Component#13 7
+    2300064: Component#15
+    2300066: Component#15 1
+    2300068: Component#15 2
+    2300070: Component#15 3
+    2300072: Component#15 4
+    2300074: Component#15 5
+    2300076: Component#15 6
+    2300078: Component#15 7
+    2300080: Component#16
+    2300082: Component#16 1
+    2300084: Component#16 2
+    2300086: Component#16 3
+    2300088: Component#17
+    2300090: Component#17 1
+    2300092: Component#17 2
+    2300094: Component#17 3
+    2300096: Component#2
+    2300098: Component#2 1
+    2300100: Component#2 2
+    2300102: Component#2 3
+    2300104: Component#2 4
+    2300106: Component#2 5
+    2300108: Component#2 6
+    2300110: Component#2 7
+    2300112: Component#3
+    2300114: Component#3 1
+    2300116: Component#3 2
+    2300118: Component#3 3
+    2300120: Component#3 4
+    2300122: Component#3 5
+    2300124: Component#3 6
+    2300126: Component#3 7
+    2300128: Component#5
+    2300130: Component#5 1
+    2300132: Component#5 2
+    2300134: Component#5 3
+    2300136: Component#5 4
+    2300138: Component#5 5
+    2300140: Component#5 6
+    2300142: Component#5 7
+    2300144: cooler box
+    2300146: corner support
+    2300148: corner support 1
+    2300150: corner support 2
+    2300152: corner support 3
+    2300154: Group 10
+    2300156: Group 101
+    2300158: Group 103
+    2300160: Group 105
+    2300162: Group 107
+    2300164: Group 116
+    2300166: Group 12
+    2300168: Group 139
+    2300170: Group 143
+    2300172: Group 166
+    2300174: Group 168
+    2300176: Group 170
+    2300178: Group 172
+    2300180: Group 174
+    2300182: Group 176
+    2300184: Group 178
+    2300186: Group 180
+    2300188: Group 182
+    2300190: Group 184
+    2300192: Group 186
+    2300194: Group 199
+    2300196: Group 2
+    2300198: Group 222
+    2300200: Group 226
+    2300202: Group 249
+    2300204: Group 251
+    2300206: Group 253
+    2300208: Group 255
+    2300210: Group 257
+    2300212: Group 259
+    2300214: Group 261
+    2300216: Group 263
+    2300218: Group 265
+    2300220: Group 267
+    2300222: Group 269
+    2300224: Group 275
+    2300226: Group 277
+    2300228: Group 279
+    2300230: Group 281
+    2300232: Group 283
+    2300234: Group 362
+    2300236: Group 364
+    2300238: Group 366
+    2300240: Group 37
+    2300242: Group 380
+    2300244: Group 382
+    2300246: Group 384
+    2300248: Group 388
+    2300250: Group 390
+    2300252: Group 392
+    2300254: Group 396
+    2300256: Group 398
+    2300258: Group 4
+    2300260: Group 400
+    2300262: Group 409
+    2300264: Group 411
+    2300266: Group 413
+    2300268: Group 415
+    2300270: Group 417
+    2300272: Group 419
+    2300274: Group 421
+    2300276: Group 423
+    2300278: Group 425
+    2300280: Group 427
+    2300282: Group 429
+    2300284: Group 60
+    2300286: Group 64
+    2300288: Group 7
+    2300290: Group 87
+    2300292: Group 89
+    2300294: Group 91
+    2300296: Group 93
+    2300298: Group 95
+    2300300: Group 97
+    2300302: Group 99
+    2300304: //RootNode
+    2300306: knob
+    2300308: knob 1
+    2300310: knob 10
+    2300312: knob 11
+    2300314: knob 12
+    2300316: knob 13
+    2300318: knob 14
+    2300320: knob 15
+    2300322: knob 16
+    2300324: knob 17
+    2300326: knob 18
+    2300328: knob 19
+    2300330: knob 2
+    2300332: knob 20
+    2300334: knob 21
+    2300336: knob 3
+    2300338: knob 4
+    2300340: knob 5
+    2300342: knob 6
+    2300344: knob 7
+    2300346: knob 8
+    2300348: knob 9
+    2300350: 'object #11 1'
+    2300352: 'object #14'
+    2300354: 'object #17'
+    2300356: 'object #2'
+    2300358: 'object #5 1'
+    2300360: 'object #8'
+    2300362: support
+    2300364: support 1
+    2300366: support 10
+    2300368: support 11
+    2300370: support 12
+    2300372: support 13
+    2300374: support 14
+    2300376: support 15
+    2300378: support 2
+    2300380: support 3
+    2300382: support 4
+    2300384: support 5
+    2300386: support 6
+    2300388: support 7
+    2300390: support 8
+    2300392: support 9
+    3300000: Component#1
+    3300002: Component#1 1
+    3300004: Component#1 2
+    3300006: Component#1 3
+    3300008: Component#1 4
+    3300010: Component#1 5
+    3300012: Component#1 6
+    3300014: Component#1 7
+    3300016: Component#11
+    3300018: Component#11 1
+    3300020: Component#11 2
+    3300022: Component#11 3
+    3300024: Component#11 4
+    3300026: Component#11 5
+    3300028: Component#11 6
+    3300030: Component#11 7
+    3300032: Component#12
+    3300034: Component#12 1
+    3300036: Component#12 2
+    3300038: Component#12 3
+    3300040: Component#12 4
+    3300042: Component#12 5
+    3300044: Component#12 6
+    3300046: Component#12 7
+    3300048: Component#13
+    3300050: Component#13 1
+    3300052: Component#13 2
+    3300054: Component#13 3
+    3300056: Component#13 4
+    3300058: Component#13 5
+    3300060: Component#13 6
+    3300062: Component#13 7
+    3300064: Component#15
+    3300066: Component#15 1
+    3300068: Component#15 2
+    3300070: Component#15 3
+    3300072: Component#15 4
+    3300074: Component#15 5
+    3300076: Component#15 6
+    3300078: Component#15 7
+    3300080: Component#16
+    3300082: Component#16 1
+    3300084: Component#16 2
+    3300086: Component#16 3
+    3300088: Component#17
+    3300090: Component#17 1
+    3300092: Component#17 2
+    3300094: Component#17 3
+    3300096: Component#2
+    3300098: Component#2 1
+    3300100: Component#2 2
+    3300102: Component#2 3
+    3300104: Component#2 4
+    3300106: Component#2 5
+    3300108: Component#2 6
+    3300110: Component#2 7
+    3300112: Component#3
+    3300114: Component#3 1
+    3300116: Component#3 2
+    3300118: Component#3 3
+    3300120: Component#3 4
+    3300122: Component#3 5
+    3300124: Component#3 6
+    3300126: Component#3 7
+    3300128: Component#5
+    3300130: Component#5 1
+    3300132: Component#5 2
+    3300134: Component#5 3
+    3300136: Component#5 4
+    3300138: Component#5 5
+    3300140: Component#5 6
+    3300142: Component#5 7
+    3300144: cooler box
+    3300146: corner support
+    3300148: corner support 1
+    3300150: corner support 2
+    3300152: corner support 3
+    3300154: Group 10
+    3300156: Group 101
+    3300158: Group 103
+    3300160: Group 105
+    3300162: Group 107
+    3300164: Group 116
+    3300166: Group 12
+    3300168: Group 139
+    3300170: Group 143
+    3300172: Group 166
+    3300174: Group 168
+    3300176: Group 170
+    3300178: Group 172
+    3300180: Group 174
+    3300182: Group 176
+    3300184: Group 178
+    3300186: Group 180
+    3300188: Group 182
+    3300190: Group 184
+    3300192: Group 186
+    3300194: Group 199
+    3300196: Group 2
+    3300198: Group 222
+    3300200: Group 226
+    3300202: Group 249
+    3300204: Group 251
+    3300206: Group 253
+    3300208: Group 255
+    3300210: Group 257
+    3300212: Group 259
+    3300214: Group 261
+    3300216: Group 263
+    3300218: Group 265
+    3300220: Group 267
+    3300222: Group 269
+    3300224: Group 275
+    3300226: Group 277
+    3300228: Group 279
+    3300230: Group 281
+    3300232: Group 283
+    3300234: Group 362
+    3300236: Group 364
+    3300238: Group 366
+    3300240: Group 37
+    3300242: Group 380
+    3300244: Group 382
+    3300246: Group 384
+    3300248: Group 388
+    3300250: Group 390
+    3300252: Group 392
+    3300254: Group 396
+    3300256: Group 398
+    3300258: Group 4
+    3300260: Group 400
+    3300262: Group 409
+    3300264: Group 411
+    3300266: Group 413
+    3300268: Group 415
+    3300270: Group 417
+    3300272: Group 419
+    3300274: Group 421
+    3300276: Group 423
+    3300278: Group 425
+    3300280: Group 427
+    3300282: Group 429
+    3300284: Group 60
+    3300286: Group 64
+    3300288: Group 7
+    3300290: Group 87
+    3300292: Group 89
+    3300294: Group 91
+    3300296: Group 93
+    3300298: Group 95
+    3300300: Group 97
+    3300302: Group 99
+    3300304: //RootNode
+    3300306: knob
+    3300308: knob 1
+    3300310: knob 10
+    3300312: knob 11
+    3300314: knob 12
+    3300316: knob 13
+    3300318: knob 14
+    3300320: knob 15
+    3300322: knob 16
+    3300324: knob 17
+    3300326: knob 18
+    3300328: knob 19
+    3300330: knob 2
+    3300332: knob 20
+    3300334: knob 21
+    3300336: knob 3
+    3300338: knob 4
+    3300340: knob 5
+    3300342: knob 6
+    3300344: knob 7
+    3300346: knob 8
+    3300348: knob 9
+    3300350: 'object #11 1'
+    3300352: 'object #14'
+    3300354: 'object #17'
+    3300356: 'object #2'
+    3300358: 'object #5 1'
+    3300360: 'object #8'
+    3300362: support
+    3300364: support 1
+    3300366: support 10
+    3300368: support 11
+    3300370: support 12
+    3300372: support 13
+    3300374: support 14
+    3300376: support 15
+    3300378: support 2
+    3300380: support 3
+    3300382: support 4
+    3300384: support 5
+    3300386: support 6
+    3300388: support 7
+    3300390: support 8
+    3300392: support 9
+    4300000: Mesh houe2
+    4300002: Mesh Group 2
+    4300004: Mesh Group 4
+    4300006: Mesh Group 7
+    4300008: Mesh support
+    4300010: Mesh Component#15
+    4300012: Mesh Component#11
+    4300014: Mesh Component#13
+    4300016: Mesh Component#1
+    4300018: Mesh Component#5
+    4300020: Mesh Component#2
+    4300022: Mesh Component#3
+    4300024: Mesh Component#12
+    4300026: Mesh Group 87
+    4300028: Mesh Group 89
+    4300030: Mesh Group 97
+    4300032: Mesh Group 101
+    4300034: Mesh Group 103
+    4300036: Mesh corner support
+    4300038: Mesh knob
+    4300040: Mesh cooler box
+    4300042: Mesh Group 275
+    4300044: Mesh Group 277
+    4300046: Mesh Group 279
+    4300048: 'Mesh object #2'
+    4300050: 'Mesh object #5'
+    4300052: 'Mesh object #8'
+    4300054: 'Mesh object #11'
+    4300056: 'Mesh object #14'
+    4300058: 'Mesh object #17'
+    4300060: Mesh knob
+    4300062: Mesh Group 362
+    4300064: Mesh Group 364
+    4300066: Mesh Group 366
+    4300068: Mesh Component#17
+    4300070: Mesh Component#16
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
