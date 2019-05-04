@@ -8,7 +8,8 @@ public class Bob : MonoBehaviour
     public const float buoyancy = 25.0f;
     Rigidbody rb;
     BoxCollider bc;
-    public List<Vector3> cornerPositions;
+    public bool caught;
+
     bool onWater;
     // Start is called before the first frame update
     void Start()

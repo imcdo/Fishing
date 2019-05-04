@@ -10,6 +10,8 @@ TagManager:
   - Controller
   - bait
   - bob
+  - weight
+  - recordtext
   layers:
   - Default
   - TransparentFX
