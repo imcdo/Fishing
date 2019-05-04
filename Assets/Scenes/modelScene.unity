@@ -827,7 +827,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179437767}
   serializedVersion: 2
-  m_Mass: 0.75
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.3
   m_UseGravity: 1
@@ -3095,17 +3095,17 @@ PrefabInstance:
     - target: {fileID: 1585829791915898939, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1585829791915898939, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1585829791915898939, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 96414905, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
       propertyPath: reelSpeed
@@ -3145,6 +3145,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
+      propertyPath: endObj
+      value: 
+      objectReference: {fileID: 179437767}
+    - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
+      propertyPath: lineWeight
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}

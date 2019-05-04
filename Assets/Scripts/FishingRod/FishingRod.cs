@@ -81,13 +81,15 @@ public class FishingRod : MonoBehaviour
     {
         // TODO: temp
         controller = GameObject.FindWithTag("Controller");
-
-        pickedup = pickedup && controller.activeInHierarchy;
+        if (controller != null) pickedup = pickedup && controller.activeInHierarchy;
         if (pickedup)
         {
-            Transform handle = RigidRod.transform.parent;
-            handle.position = controller.transform.position;
-            handle.rotation = controller.transform.rotation;
+            if (controller != null)
+            {
+                Transform handle = RigidRod.transform.parent;
+                handle.position = controller.transform.position;
+                handle.rotation = controller.transform.rotation;
+            }
 
 
             Vector2 touchPos = GvrControllerInput.TouchPos;
@@ -146,7 +148,7 @@ public class FishingRod : MonoBehaviour
     void release(float amount)
     {
         // amount *= releaseSpeed;
-        Debug.Log(fl.getTipVelocity() + " " + Vector3.Magnitude(fl.getTipVelocity()));
+//        Debug.Log(fl.getTipVelocity() + " " + Vector3.Magnitude(fl.getTipVelocity()));
         fl.lineLength += Vector3.Magnitude(fl.getTipVelocity());
     }
 
