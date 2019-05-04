@@ -41,7 +41,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DistortionTex:
         m_Texture: {fileID: 2800000, guid: b01980ff2ae464fadaac446f66f5558f, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 2, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Fresnel:
         m_Texture: {fileID: 2800000, guid: 5b5c5575fd4c74abd9f7b30862fb76a3, type: 3}
@@ -53,11 +53,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: e6f8288974c664a309d6c66de636978c, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 1, y: 1}
     - _ReflectionTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _ReflectiveColor:
         m_Texture: {fileID: 2800000, guid: 17680dc3bf8f74b498b01cf1481e2593, type: 3}
@@ -107,7 +107,7 @@ Material:
     - _Ambient: 1
     - _Displacement: 0.27863377
     - _DisplacementTiling: 18.586807
-    - _DistortionPower: 5
+    - _DistortionPower: 1
     - _FadeExp: 0.91503274
     - _FoamWaveDependency: 0.10205479
     - _FresnelPower: 1.7931035
@@ -125,7 +125,7 @@ Material:
     - _Shininess: 318.04
     - _ShoreTiling: 56.862743
     - _Speed: 0.4137931
-    - _TargetValue: 0
+    - _TargetValue: 1
     - _TimeScale1: 30
     - _TimeScale2: 5
     - _TresholdDensity: 20
@@ -136,7 +136,7 @@ Material:
     - _WaveCapsAmount: 0.18275861
     - _WaveFoamDistort: 0.27931035
     - _WaveScale: 0.046289656
-    - _WavesDensity: 8
+    - _WavesDensity: 10
     m_Colors:
     - WaveSpeed: {r: 1.086165, g: 4.440575, b: 12.105146, a: -3.0206447}
     - _AnimationDirection: {r: 2, g: 4, b: 2, a: -1}
@@ -180,7 +180,7 @@ Material:
     - _WaveOffset: {r: 1, g: 1, b: -0.01, a: -0.01}
     - _WaveScale4: {r: 0.1, g: 0.1, b: 0.01, a: 0.01}
     - _WavesColor: {r: 0.6691177, g: 0.71247464, b: 1, a: 0.347}
-    - _WorldLightDir: {r: -0.030375138, g: -0.20139083, b: -0.97903997, a: 0}
+    - _WorldLightDir: {r: 0, g: 0, b: 1, a: 0}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

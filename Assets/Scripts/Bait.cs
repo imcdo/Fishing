@@ -15,10 +15,20 @@ public class Bait : MonoBehaviour
 
     public void hover()
     {
+        Vector3 s = GetComponent<Collider>().bounds.size;
         myRenderer.material = gazedAtMaterial;
         descriptionInstance = Instantiate(descriptionPrefab,
-            new Vector3(transform.position.x, transform.position.y + 1, transform.position.z),
+            new Vector3(transform.position.x, transform.position.y, transform.position.z),
             transform.rotation);
+        descriptionInstance.transform.LookAt(2 * descriptionInstance.transform.position - Camera.main.transform.position);
+        RectTransform rt = descriptionInstance.GetComponent<RectTransform>();
+        float translationY = rt.sizeDelta.y * rt.localScale.y/2;
+        descriptionInstance.transform.position =  new Vector3(descriptionInstance.transform.position.x, 
+            descriptionInstance.transform.position.y + s.y/2 + 
+            translationY, descriptionInstance.transform.position.z) + 
+            new Vector3(Camera.main.transform.forward.x * s.x, 
+                0,
+                Camera.main.transform.forward.z * s.z); 
         descriptionInstance.transform.parent = gameObject.transform;
     }
 

@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public string selectedBaitString;
     public System.Random generator;
     public Bob bob;
+    public bool bobLured;
     void Awake()
     {
         if (instance != null && instance != this)
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour
         }
         bob = GameObject.FindGameObjectWithTag("bob").GetComponent<Bob>();
         fishingLog = GameObject.FindGameObjectWithTag("log").GetComponent<FishingLog>();
-        
+        bobLured = false;
     }
 
     // Update is called once per frame

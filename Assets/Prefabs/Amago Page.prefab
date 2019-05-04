@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e4529979662c045a07d8a68ccf5f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishName: trout
+  fishName: amago
 --- !u!1 &904200864860990454
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,8 +475,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.116, y: 0.32799995}
-  m_SizeDelta: {x: 230.912, y: 110.6472}
+  m_AnchoredPosition: {x: 0.14052, y: 0.32799995}
+  m_SizeDelta: {x: 262.01, y: 110.6472}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1795036579659160262
 CanvasRenderer:
@@ -519,7 +519,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TROUT
+  m_Text: AMAGO
 --- !u!1 &8763820003182743062
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4456499224075932554}
   m_Layer: 0
-  m_Name: Trout Page
+  m_Name: Amago Page
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
