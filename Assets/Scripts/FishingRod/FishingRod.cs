@@ -176,5 +176,16 @@ public class FishingRod : MonoBehaviour
         fl.lineLength += Vector3.Magnitude(fl.getTipVelocity());
     }
 
+    public void ApplyAccelerationToTip(Vector3 acc)
+    {
+        Matrix4x4 ltwFollow = FollowRod.transform.localToWorldMatrix;
+        Vector3 tipPos = ltwFollow * new Vector4(
+            rodPoints[rodPoints.Length-1].x, 
+            rodPoints[rodPoints.Length - 1].y, 
+            rodPoints[rodPoints.Length - 1].z, 1);
+
+        FollowRod.GetComponent<Rigidbody>().AddForceAtPosition(acc, tipPos);
+    }
+
     public void grab() { pickedup = true;  }
 }

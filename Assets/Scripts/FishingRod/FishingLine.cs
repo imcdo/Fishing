@@ -63,7 +63,7 @@ public class FishingLine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fr = GetComponentInChildren<FishingRod>();
+        fr = transform.parent.parent.parent.GetComponent<FishingRod>();
         lr = GetComponent<LineRenderer>();
     }
 
@@ -126,6 +126,7 @@ public class FishingLine : MonoBehaviour
                     particles[1].oldPos =  particles[0].oldPos + (particles[2].oldPos - particles[0].oldPos)  * ((i + 1)/ diffParticle);
                 }
             }
+
         }
         
         
@@ -133,7 +134,7 @@ public class FishingLine : MonoBehaviour
         for(int i =  1; i < numLineParticles -1; ++i)
         {
 
-            particles[i].acc = gravity;
+            particles[i].acc = lineWeight *  gravity;
             Verlet(particles[i], Time.fixedDeltaTime);
             PoleConstraint(particles[i - 1], particles[i],  lineLength/ (1.0f * numLineParticles) );
             Debug.DrawLine(particles[i].pos, particles[i].pos + particles[i].acc, Color.red);
@@ -154,14 +155,12 @@ public class FishingLine : MonoBehaviour
 //            Debug.Log(last.acc);
             LineParticle last = particles[particles.Count - 1];
             last.acc = (endRb.velocity - endOldVel) / Time.fixedDeltaTime;
-         
+            last.acc = gravity;
             // normal sim shit
             Vector3 p1diff, p2diff;
-            
             PoleConstraint(particles[particles.Count-2], last,  lineLength/ (1.0f * numLineParticles), out p1diff, out p2diff);
             
-            
-            last.acc -= p2diff / Time.fixedDeltaTime / Time.fixedDeltaTime;
+            // last.acc -= p2diff / Time.fixedDeltaTime / Time.fixedDeltaTime;
             Verlet(last, Time.fixedDeltaTime);
             
             Debug.DrawLine(last.pos, last.pos + p2diff, Color.blue);
@@ -171,8 +170,10 @@ public class FishingLine : MonoBehaviour
             endObj.transform.position = last.pos;
             Debug.DrawLine(endObj.transform.position,endObj.transform.position + endRb.velocity - endOldVel, Color.green);
         }
+        // fr.ApplyAccelerationToTip(particles[0].acc * 1000000000000000000000.0f);
+
     }
-    
+
     private void Verlet( LineParticle p, float dt)
     {
         Vector3 temp = p.pos;
