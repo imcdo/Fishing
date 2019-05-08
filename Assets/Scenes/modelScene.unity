@@ -827,7 +827,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179437767}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 0.75
   m_Drag: 0
   m_AngularDrag: 0.3
   m_UseGravity: 1
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd3778750efebe4c89c04220689370a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cornerPositions: []
+  caught: 0
 --- !u!65 &179437770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1203,6 +1203,7 @@ MonoBehaviour:
   selectedBait: {fileID: 0}
   selectedBaitString: 
   bob: {fileID: 0}
+  bobLured: 0
 --- !u!4 &227230465
 Transform:
   m_ObjectHideFlags: 0

@@ -85,10 +85,12 @@ public class FishingLine : MonoBehaviour
         }
         for (int i = 0; i < numLineParticles; i++)
         {
+            Debug.DrawLine(particles[i].pos,particles[i].pos + particles[i].acc, Color.red);
             lr.SetPosition(i, particles[i].pos);
             cubes[i].transform.position = particles[i].pos;
 //            Debug.Log(particles[i].acc + " " + particles[i].pos);
         }
+
     }
     
     void FixedUpdate()
@@ -98,6 +100,7 @@ public class FishingLine : MonoBehaviour
         particles[0].pos = firstPoint;
 //        Verlet(ref particles[0], Time.deltaTime);
         Vector3 endPos = particles[0].pos;
+        
 //        Debug.Log(lineLength);
         // Update number of particles
         numLineParticles = Mathf.FloorToInt(lineLength / numLineParticlesPerLengthUnit);
@@ -129,9 +132,11 @@ public class FishingLine : MonoBehaviour
         // handle all particles in the inside of the line
         for(int i =  1; i < numLineParticles -1; ++i)
         {
+
             particles[i].acc = gravity;
             Verlet(particles[i], Time.fixedDeltaTime);
             PoleConstraint(particles[i - 1], particles[i],  lineLength/ (1.0f * numLineParticles) );
+            Debug.DrawLine(particles[i].pos, particles[i].pos + particles[i].acc, Color.red);
         }
         particles[numLineParticles - 1].acc = lineWeight * gravity;
 
@@ -139,34 +144,43 @@ public class FishingLine : MonoBehaviour
 
         prevLineLength = lineLength;
         timestep = Time.fixedDeltaTime;
-        
+
         // Handle the last boi 
         Rigidbody endRb = endObj.GetComponent<Rigidbody>();
         if (endObj != null && endRb != null)
         {
             // get dat acceleration
-            LineParticle last = particles[particles.Count - 1];
-            last.acc = (endRb.velocity - endOldVel) / Time.fixedDeltaTime;
 //            last.acc = Vector3.Project(last.acc, Vector3.up);
 //            Debug.Log(last.acc);
-            endOldVel = endRb.velocity;
+            LineParticle last = particles[particles.Count - 1];
+            last.acc = (endRb.velocity - endOldVel) / Time.fixedDeltaTime;
          
             // normal sim shit
+            Vector3 p1diff, p2diff;
+            
+            PoleConstraint(particles[particles.Count-2], last,  lineLength/ (1.0f * numLineParticles), out p1diff, out p2diff);
+            
+            
+            last.acc -= p2diff / Time.fixedDeltaTime / Time.fixedDeltaTime;
             Verlet(last, Time.fixedDeltaTime);
-            PoleConstraint(particles[particles.Count-2], last,  lineLength/ (1.0f * numLineParticles) );
+            
+            Debug.DrawLine(last.pos, last.pos + p2diff, Color.blue);
             // set endBoi to particles pos
 
+            endOldVel = endRb.velocity;
             endObj.transform.position = last.pos;
+            Debug.DrawLine(endObj.transform.position,endObj.transform.position + endRb.velocity - endOldVel, Color.green);
         }
     }
     
     private void Verlet( LineParticle p, float dt)
     {
         Vector3 temp = p.pos;
-        p.pos += p.pos - p.oldPos + (p.acc*dt*dt);
+        p.pos += p.pos - p.oldPos + (p.acc*dt*dt);  
         p.oldPos = temp;
-    }    
+    }
     
+    // returns teh change in position applied to p2
     private void PoleConstraint( LineParticle p1, LineParticle p2, float restLength)
     {
         Vector3 delta = p2.pos - p1.pos;
@@ -178,8 +192,26 @@ public class FishingLine : MonoBehaviour
         p2.pos -= delta*diff*dampFactor;
     }
     
-    public Vector3 getTipVelocity()
+    // returns teh change in position applied to p2
+    private void PoleConstraint( LineParticle p1, LineParticle p2, float restLength, out Vector3 p1Change , out Vector3 p2Change)
     {
+        Vector3 delta = p2.pos - p1.pos;
+
+        float deltaLength = delta.magnitude;
+
+        float diff = (deltaLength - restLength)/deltaLength;
+        Vector3 oldPos1 = p1.pos;
+        p1.pos += delta*diff*dampFactor;
+        
+        Vector3 oldPos2 = p2.pos;
+        p2.pos -= delta*diff*dampFactor;
+
+        p1Change = (p1.pos - oldPos1);
+        p2Change = (p2.pos - oldPos2);
+    }
+    
+    public Vector3 getTipVelocity()
+    {    
 //        Debug.Log(timestep + " " + particles[particles.Count - 1].pos + " " + (particles[particles.Count - 1].pos - particles[particles.Count - 1].oldPos));
         return (particles[particles.Count - 1].pos - particles[particles.Count - 1].oldPos);
     }
