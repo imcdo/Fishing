@@ -16,7 +16,8 @@ public class FishingRod : MonoBehaviour
     [SerializeField] private float reelSpeed = 10;
     [SerializeField] private float releaseSpeed = 20;
 
-    private const int NUM_ROD_POINTS = 6;
+    private Transform[] rodBones;
+
     Vector3[] rodPoints;
 
     private Vector3 startpos;
@@ -39,28 +40,46 @@ public class FishingRod : MonoBehaviour
         FollowRod = transform.Find("FollowRod").gameObject;
 
         startpos = transform.position;
-
         ConfigurableJoint[] joints = FollowRod.GetComponents<ConfigurableJoint>();
 
+        GameObject rodMesh = GetComponentInChildren<Animator>().gameObject;
+        int numBones = 0;
+        Transform bone = rodMesh.transform.GetChild(0);
+        while (bone.childCount != 0)
+        {
+            numBones++;
+            bone = bone.GetChild(0);
+        }
+
+        rodPoints = new Vector3[numBones];
+
         Vector3 startRod = joints[0].anchor;
-        Vector3 endRod   = joints[1].anchor;
+        Vector3 endRod = joints[1].anchor;
         Vector3 endVector = endRod - startRod;
 
-        L = Vector3.Distance(endRod, startRod); 
+        L = Vector3.Distance(endRod, startRod);
 
-        rodPoints = new Vector3[NUM_ROD_POINTS];
-
-        for (int i = 0; i < NUM_ROD_POINTS; i++)
+        for (int c = 0; c < numBones; c++)
         {
-            rodPoints[i] = startRod + endVector  * i / (NUM_ROD_POINTS - 1);
-//            Debug.Log(rodPoints[i]);
+            rodPoints[c] = startRod + endVector * c / (numBones - 1);
+            //            Debug.Log(rodPoints[c]);
         }
+
+        bone = rodMesh.transform.GetChild(0);
+        rodBones = new Transform[numBones];
+        for (int b = 0; b < numBones; b++)
+        {
+            rodBones[b] = bone.GetChild(0);
+            bone = bone.GetChild(0);
+        }
+
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
+        
         controller = GameObject.FindWithTag("Controller");
         
         cubes = new GameObject[rodPoints.Length];
@@ -113,14 +132,19 @@ public class FishingRod : MonoBehaviour
         {
             Vector4 worldPointRigid =  ltwRigid * new Vector4(rodPoints[i].x/10.0f, rodPoints[i].y/10.0f, rodPoints[i].z/10.0f, 1);
             Vector4 worldPointFollow = ltwFollow * new Vector4(rodPoints[i].x, rodPoints[i].y, rodPoints[i].z, 1);
-            
+
+
             float w = RodEquation((1.0f * i) / (rodPoints.Length -1));
             
             Vector3 worldPoint = (1-w) * new Vector3(worldPointRigid.x, worldPointRigid.y, worldPointRigid.z) +
                 (w) * new Vector3(worldPointFollow.x, worldPointFollow.y, worldPointFollow.z);
+            Quaternion worldRot = Quaternion.Slerp(RigidRod.transform.rotation ,FollowRod.transform.rotation, w);
             
             if (i == rodPoints.Length - 1) fl.firstPoint = worldPoint;
+
             cubes[i].transform.SetPositionAndRotation(worldPoint, FollowRod.transform.rotation);
+            rodBones[i].transform.SetPositionAndRotation(worldPoint, worldRot);
+            rodBones[i].transform.Rotate(new Vector3(90, 0, 0));
         }
     }
 
