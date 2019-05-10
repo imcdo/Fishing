@@ -105,6 +105,8 @@ public class Fish : MonoBehaviour
             descriptionInstance = Instantiate(descriptionPrefab,
                 new Vector3(transform.position.x, transform.position.y, transform.position.z),
                 transform.rotation);
+            Text txt = descriptionInstance.GetComponentInChildren<Text>();
+            txt.text = fishType;
             descriptionInstance.transform.LookAt(2 * descriptionInstance.transform.position - Camera.main.transform.position);
             RectTransform   rt = descriptionInstance.GetComponent<RectTransform>();
             float translationY = rt.sizeDelta.y * rt.localScale.y/2;

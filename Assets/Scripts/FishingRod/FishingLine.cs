@@ -10,7 +10,7 @@ public class FishingLine : MonoBehaviour
 
     private LineRenderer lr;
     
-    [SerializeField] private float numLineParticlesPerLengthUnit = 1f;
+    public float numLineParticlesPerLengthUnit = .1f;
 
     private int numLineParticles;
     
@@ -191,8 +191,8 @@ public class FishingLine : MonoBehaviour
     public Vector3 getTipVelocity()
     {    
 //        Debug.Log(timestep + " " + particles[particles.Count - 1].pos + " " + (particles[particles.Count - 1].pos - particles[particles.Count - 1].oldPos));
-        return (particles[particles.Count - 1].pos - particles[particles.Count - 1].oldPos);
-    }
+        return (particles[particles.Count - 1].pos - particles[particles.Count - 1].oldPos) * .9f;
+         }
 }
 
 

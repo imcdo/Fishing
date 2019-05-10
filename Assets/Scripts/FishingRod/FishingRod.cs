@@ -164,7 +164,7 @@ public class FishingRod : MonoBehaviour
     void reel(float amount)
     {
         amount *= reelSpeed;
-        fl.lineLength = Mathf.Max(fl.lineLength - amount, 0);
+        fl.lineLength = Mathf.Max(fl.lineLength - amount, 2 * fl.numLineParticlesPerLengthUnit);
     }
 
     void release(float amount)

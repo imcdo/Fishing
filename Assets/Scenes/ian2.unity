@@ -1396,7 +1396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd3778750efebe4c89c04220689370a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viscoscity: 10
+  viscoscity: 100
+  buoyancy: 100
   caught: 0
 --- !u!65 &179437770
 BoxCollider:
@@ -3820,8 +3821,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481524218}
-  m_LocalRotation: {x: 0.12555976, y: 0.87437946, z: 0.3369424, w: -0.3258301}
-  m_LocalPosition: {x: 33.40669, y: -46.670677, z: 38.446575}
+  m_LocalRotation: {x: 0.092594646, y: 0.8568935, z: 0.1655306, w: -0.47933233}
+  m_LocalPosition: {x: 9.2583275, y: -3.9565904, z: 5.467513}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4413,7 +4414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: dd89d12bbf7946c4db1ef6f9c0414468, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dd89d12bbf7946c4db1ef6f9c0414468, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5237,6 +5238,10 @@ PrefabInstance:
     - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
       propertyPath: lineWeight
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
+      propertyPath: numLineParticlesPerLengthUnit
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1585829792686326658, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52,
         type: 3}
