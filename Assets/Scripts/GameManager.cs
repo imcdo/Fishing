@@ -16,7 +16,20 @@ public class GameManager : MonoBehaviour
 
     //holds records of highest weight fish caught
     public Dictionary<string, double> records;
-    public Dictionary<string, List<string>> fishToBait;
+
+    
+    // "worm", "algae", "minnow", "copepod"
+    public Dictionary<string, List<string>> fishToBait = new Dictionary<string, List<string>>()
+    {
+        {"Largemouth Bass",        new List<string>(){"worm", "minnow"}},
+        {"Brown Trout",            new List<string>(){"copepod", "minnow"}},
+        {"Whitespotted Char",      new List<string>(){"worm", "copepod"}},
+        {"Amago",                  new List<string>(){"worm", "algae", "minnow"}},
+        {"Steelhead Trout",        new List<string>(){"worm"}},
+        {"Common catfish",         new List<string>(){"algae", "minnow"}},
+        {"Northern pike",          new List<string>(){"copepod", "minnow"}},
+        {"Ayu Sweetfish",          new List<string>(){"algae"}}
+    };
     public FishingLog fishingLog;
     public List<GameObject> baitList;
     public List<string> fishList;
