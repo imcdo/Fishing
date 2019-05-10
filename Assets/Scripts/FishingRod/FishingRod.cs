@@ -116,7 +116,7 @@ public class FishingRod : MonoBehaviour
                 release(Time.deltaTime);
             }
 
-            if (Input.GetKeyDown("c"))
+            if (Input.GetKeyDown("c")|| GvrControllerInput.AppButtonUp || GvrControllerInput.HomeButtonDown)
             {
                 Debug.Log("drpopping rod");
                 drop();
