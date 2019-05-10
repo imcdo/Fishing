@@ -19,17 +19,7 @@ public class GameManager : MonoBehaviour
 
     
     // "worm", "algae", "minnow", "copepod"
-    public Dictionary<string, List<string>> fishToBait = new Dictionary<string, List<string>>()
-    {
-        {"Largemouth Bass",        new List<string>(){"worm", "minnow"}},
-        {"Brown Trout",            new List<string>(){"copepod", "minnow"}},
-        {"Whitespotted Char",      new List<string>(){"worm", "copepod"}},
-        {"Amago",                  new List<string>(){"worm", "algae", "minnow"}},
-        {"Steelhead Trout",        new List<string>(){"worm"}},
-        {"Common catfish",         new List<string>(){"algae", "minnow"}},
-        {"Northern pike",          new List<string>(){"copepod", "minnow"}},
-        {"Ayu Sweetfish",          new List<string>(){"algae"}}
-    };
+    public Dictionary<string, List<string>> fishToBait;
     public FishingLog fishingLog;
     public List<GameObject> baitList;
     public List<string> fishList;
@@ -56,6 +46,15 @@ public class GameManager : MonoBehaviour
             records.Add(fish, 0);
         }
         bobLured = false;
+        fishToBait = new Dictionary<string, List<string>>();
+        fishToBait.Add("Largemouth Bass", new List<string>(){"worm", "minnow"});
+        fishToBait.Add("Brown Trout", new List<string>(){"copepod", "minnow"});
+        fishToBait.Add("Whitespotted Char", new List<string>(){"worm", "copepod"});
+        fishToBait.Add("Amago", new List<string>(){"worm", "algae", "minnow"});
+        fishToBait.Add("Steelhead Trout", new List<string>(){"worm"});
+        fishToBait.Add("Common Catfish", new List<string>(){"algae", "minnow"});
+        fishToBait.Add("Northern Pike", new List<string>(){"copepod", "minnow"});
+        fishToBait.Add("Ayu Sweetfish", new List<string>(){"algae"});
     }
 
     private void Start()

@@ -15,6 +15,7 @@ public class Record : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(fishName);
         record.text = "Record: " + GameManager.Instance.records[fishName].ToString("n2") + " lbs";
     }
 }

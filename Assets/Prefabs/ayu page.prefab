@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e4529979662c045a07d8a68ccf5f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishName: bass
+  fishName: Ayu Sweetfish
 --- !u!1 &1727006003125055164
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4303473413778019590}
   m_Layer: 0
-  m_Name: pike page
+  m_Name: ayu page
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

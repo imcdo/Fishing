@@ -16,7 +16,7 @@ public class Fish : MonoBehaviour
     public const float turnSpeed = .05f;
     public const float turnFrames = 10;
     public const float swimForce = 100.0f;
-    public const float attractionRadius = 10.0f;
+    public const float attractionRadius = 12.0f;
     public const float chances = 1f;
     public const float caughtSpeed = 2.0f;
     
@@ -69,9 +69,11 @@ public class Fish : MonoBehaviour
         Vector3 toBob = GameManager.Instance.bob.transform.position - transform.position;
         float dist = toBob.magnitude;
         
-        //List<string> baits = GameManager.Instance.fishToBait[fishType];
-        //bool isBait = baits.Contains(GameManager.Instance.selectedBaitString) ;
-        bool isBait = true;
+        bool isBait = false;
+        List<string> baits = GameManager.Instance.fishToBait[fishType];
+        isBait = baits.Contains(GameManager.Instance.selectedBaitString);
+
+        Debug.Log(fishType + dist);
         if (dist < attractionRadius && isBait) {
             System.Random gen = GameManager.Instance.generator;
             if((float)gen.NextDouble() < chances) {
