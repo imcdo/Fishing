@@ -81,18 +81,7 @@ public class FishingRod : MonoBehaviour
     {
         
         controller = GameObject.FindWithTag("Controller");
-        
-        cubes = new GameObject[rodPoints.Length];
-        int i = 0;
-        foreach (Vector3 point in rodPoints)
-        {
-            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cube.transform.SetParent(FollowRod.transform.parent);
-            cube.transform.localScale = new Vector3(.1f, .1f, .1f);
-//            Debug.Log(point);
-            cube.transform.SetPositionAndRotation(FollowRod.transform.localPosition + point, Quaternion.identity);
-            cubes[i++] = cube;
-        }
+
     }
 
     // Update is called once per frame
@@ -144,7 +133,6 @@ public class FishingRod : MonoBehaviour
             
             if (i == rodPoints.Length - 1) fl.firstPoint = worldPoint;
 
-            cubes[i].transform.SetPositionAndRotation(worldPoint, FollowRod.transform.rotation);
             rodBones[i].transform.SetPositionAndRotation(worldPoint, worldRot);
             rodBones[i].transform.Rotate(new Vector3(90, 0, 0));
         }
