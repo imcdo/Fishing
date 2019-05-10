@@ -51,13 +51,17 @@ public class Fish : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
-        if(coll.gameObject.tag == "bob") {
+        if(coll.gameObject.tag.Equals("bob")) {
             Debug.Log("caught");
             caught = true;
             HingeJoint tempHinge = coll.gameObject.AddComponent<HingeJoint>();
             tempHinge.connectedBody = rb;
             tempHinge.anchor = transform.InverseTransformPoint(coll.GetContact(0).point);
             rb.useGravity = true;
+            tempHinge.useSpring = true;
+            var modspring = tempHinge.spring;
+            modspring.spring = 10;
+            tempHinge.spring = modspring;
         }
     }
 

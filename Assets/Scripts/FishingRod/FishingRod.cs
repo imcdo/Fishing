@@ -24,7 +24,7 @@ public class FishingRod : MonoBehaviour
     private FishingLine fl;
     float L;
 
-    private GameObject[] cubes;
+//    private GameObject[] cubes;
 
     public Vector3 lineAnchor
     {
@@ -82,7 +82,7 @@ public class FishingRod : MonoBehaviour
         
         controller = GameObject.FindWithTag("Controller");
         
-        cubes = new GameObject[rodPoints.Length];
+//        cubes = new GameObject[rodPoints.Length];
         int i = 0;
         foreach (Vector3 point in rodPoints)
         {
@@ -91,7 +91,7 @@ public class FishingRod : MonoBehaviour
             cube.transform.localScale = new Vector3(.1f, .1f, .1f);
 //            Debug.Log(point);
             cube.transform.SetPositionAndRotation(FollowRod.transform.localPosition + point, Quaternion.identity);
-            cubes[i++] = cube;
+//            cubes[i++] = cube;
         }
     }
 
@@ -144,7 +144,7 @@ public class FishingRod : MonoBehaviour
             
             if (i == rodPoints.Length - 1) fl.firstPoint = worldPoint;
 
-            cubes[i].transform.SetPositionAndRotation(worldPoint, FollowRod.transform.rotation);
+//            cubes[i].transform.SetPositionAndRotation(worldPoint, FollowRod.transform.rotation);
             rodBones[i].transform.SetPositionAndRotation(worldPoint, worldRot);
             rodBones[i].transform.Rotate(new Vector3(90, 0, 0));
         }

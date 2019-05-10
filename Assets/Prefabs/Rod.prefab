@@ -144,7 +144,8 @@ MonoBehaviour:
   dampFactor: 0.5
   lineLength: 4
   firstPoint: {x: 0, y: 0, z: 0}
-  floater: {fileID: 0}
+  lineWeight: 5
+  endObj: {fileID: 0}
 --- !u!1 &1585829791486745455
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +398,7 @@ Transform:
   m_LocalPosition: {x: 0.32804847, y: 1.7360253, z: 0.80993557}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2063404001516223368}
+  - {fileID: 2164786692999341797}
   - {fileID: 1585829791486745448}
   - {fileID: 1585829792686326656}
   m_Father: {fileID: 0}
@@ -845,7 +846,7 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!1001 &2063404001515823390
+--- !u!1001 &2164786692998954099
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -914,9 +915,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e655b5a6a1699034b8faa1f1e9a15831, type: 3}
---- !u!4 &2063404001516223368 stripped
+--- !u!4 &2164786692999341797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400022, guid: e655b5a6a1699034b8faa1f1e9a15831,
     type: 3}
-  m_PrefabInstance: {fileID: 2063404001515823390}
+  m_PrefabInstance: {fileID: 2164786692998954099}
   m_PrefabAsset: {fileID: 0}

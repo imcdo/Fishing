@@ -34,7 +34,7 @@ public class FishingLine : MonoBehaviour
     }
     
     private List<LineParticle> particles;
-    private GameObject[] cubes;
+//    private GameObject[] cubes;
 
     private float timestep;
 
@@ -51,12 +51,12 @@ public class FishingLine : MonoBehaviour
         
         
         particles = new List<LineParticle>();
-        cubes = new GameObject[numLineParticles];
+//        cubes = new GameObject[numLineParticles];
         for (int i = 0; i < numLineParticles; i++)
         {
             particles.Add(new LineParticle());
-            cubes[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cubes[i].transform.localScale = new Vector3(.1f, .1f, .1f);
+//            cubes[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
+//            cubes[i].transform.localScale = new Vector3(.1f, .1f, .1f);
         }
     }
 
@@ -76,18 +76,18 @@ public class FishingLine : MonoBehaviour
         lr.endWidth = .1f;
         
         
-        for (int i = 0; i < cubes.Length; i++) Destroy(cubes[i]);
-        cubes = new GameObject[numLineParticles];
-        for (int i = 0; i < numLineParticles; i++)
-        {
-            cubes[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cubes[i].transform.localScale = new Vector3(.1f, .1f, .1f);
-        }
+//        for (int i = 0; i < cubes.Length; i++) Destroy(cubes[i]);
+//        cubes = new GameObject[numLineParticles];
+//        for (int i = 0; i < numLineParticles; i++)
+//        {
+//            cubes[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
+//            cubes[i].transform.localScale = new Vector3(.1f, .1f, .1f);
+//        }
         for (int i = 0; i < numLineParticles; i++)
         {
             Debug.DrawLine(particles[i].pos,particles[i].pos + particles[i].acc, Color.red);
             lr.SetPosition(i, particles[i].pos);
-            cubes[i].transform.position = particles[i].pos;
+//            cubes[i].transform.position = particles[i].pos;
 //            Debug.Log(particles[i].acc + " " + particles[i].pos);
         }
 
@@ -155,19 +155,19 @@ public class FishingLine : MonoBehaviour
 //            Debug.Log(last.acc);
             LineParticle last = particles[particles.Count - 1];
             last.acc = (endRb.velocity - endOldVel) / Time.fixedDeltaTime;
-            last.acc = gravity;
+//            last.acc = gravity;
             // normal sim shit
             Vector3 p1diff, p2diff;
             PoleConstraint(particles[particles.Count-2], last,  lineLength/ (1.0f * numLineParticles), out p1diff, out p2diff);
             
-            // last.acc -= p2diff / Time.fixedDeltaTime / Time.fixedDeltaTime;
+            last.acc -= p2diff / Time.fixedDeltaTime / Time.fixedDeltaTime;
             Verlet(last, Time.fixedDeltaTime);
             
             Debug.DrawLine(last.pos, last.pos + p2diff, Color.blue);
             // set endBoi to particles pos
 
             endOldVel = endRb.velocity;
-            endObj.transform.position = last.pos;
+            endObj.transform.SetPositionAndRotation(last.pos, endObj.transform.rotation);
             Debug.DrawLine(endObj.transform.position,endObj.transform.position + endRb.velocity - endOldVel, Color.green);
         }
         // fr.ApplyAccelerationToTip(particles[0].acc * 1000000000000000000000.0f);
