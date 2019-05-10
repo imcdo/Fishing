@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Autodesk_Cache_File>
+  <cacheType Type="OneFile" Format="mcc"/>
+  <time Range="480-19200"/>
+  <cacheTimePerFrame TimePerFrame="240"/>
+  <cacheVersion Version="2.0"/>
+  <Channels>
+    <channel0 ChannelName="book-pointcache" ChannelType="DoubleVectorArray" ChannelInterpretation="Points" SamplingType="Regular" SamplingRate="240" StartTime="480" EndTime="19200"/>
+  </Channels>
+</Autodesk_Cache_File>

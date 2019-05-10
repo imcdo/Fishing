@@ -34,8 +34,6 @@ public class FishingLine : MonoBehaviour
     }
     
     private List<LineParticle> particles;
-//    private GameObject[] cubes;
-
     private float timestep;
 
     
@@ -51,12 +49,9 @@ public class FishingLine : MonoBehaviour
         
         
         particles = new List<LineParticle>();
-//        cubes = new GameObject[numLineParticles];
         for (int i = 0; i < numLineParticles; i++)
         {
             particles.Add(new LineParticle());
-//            cubes[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
-//            cubes[i].transform.localScale = new Vector3(.1f, .1f, .1f);
         }
     }
 
@@ -72,23 +67,13 @@ public class FishingLine : MonoBehaviour
         lr.positionCount = numLineParticles;
         lr.startColor = Color.white;
         lr.endColor = Color.white;
-        lr.startWidth = .1f;
-        lr.endWidth = .1f;
-        
-        
-//        for (int i = 0; i < cubes.Length; i++) Destroy(cubes[i]);
-//        cubes = new GameObject[numLineParticles];
-//        for (int i = 0; i < numLineParticles; i++)
-//        {
-//            cubes[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
-//            cubes[i].transform.localScale = new Vector3(.1f, .1f, .1f);
-//        }
+        lr.startWidth = .01f;
+        lr.endWidth = .01f;
+    
         for (int i = 0; i < numLineParticles; i++)
         {
             Debug.DrawLine(particles[i].pos,particles[i].pos + particles[i].acc, Color.red);
             lr.SetPosition(i, particles[i].pos);
-//            cubes[i].transform.position = particles[i].pos;
-//            Debug.Log(particles[i].acc + " " + particles[i].pos);
         }
 
     }
@@ -167,7 +152,10 @@ public class FishingLine : MonoBehaviour
             // set endBoi to particles pos
 
             endOldVel = endRb.velocity;
-            endObj.transform.SetPositionAndRotation(last.pos, endObj.transform.rotation);
+            
+            endObj.transform.position = last.pos;
+            endRb.velocity = (last.pos - last.oldPos);
+            Debug.Log(endRb.velocity);
             Debug.DrawLine(endObj.transform.position,endObj.transform.position + endRb.velocity - endOldVel, Color.green);
         }
         // fr.ApplyAccelerationToTip(particles[0].acc * 1000000000000000000000.0f);
