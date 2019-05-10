@@ -146,33 +146,6 @@ public class FishingLine : MonoBehaviour
             endOldVel = endRb.velocity;
             Debug.DrawLine(last.pos,     last.pos + last.acc, Color.red);
             Debug.DrawLine(endRb.position, endRb.position + endRb.velocity / Time.fixedDeltaTime , Color.blue);
-
-            /*
-            // get dat acceleration
-//            last.acc = Vector3.Project(last.acc, Vector3.up);
-//            Debug.Log(last.acc);
-            LineParticle last = particles[particles.Count - 1];
-            last.acc = (endRb.velocity - endOldVel) / Time.fixedDeltaTime;
-//            last.acc = gravity * lineWeight;
-
-//            last.acc = gravity;
-            // normal sim shit
-            Vector3 p1diff, p2diff;
-            PoleConstraint(particles[particles.Count-2], last,  lineLength/ (1.0f * numLineParticles), out p1diff, out p2diff);
-            
-            last.acc -= p2diff / Time.fixedDeltaTime / Time.fixedDeltaTime;
-            Verlet(last, Time.fixedDeltaTime);
-            
-            Debug.DrawLine(last.pos, last.pos + p2diff, Color.blue);
-            // set endBoi to particles pos
-
-            endOldVel = endRb.velocity;
-            
-            endObj.transform.position = last.pos;
-            endRb.velocity = (last.pos - last.oldPos);
-            Debug.Log(endRb.velocity);
-            Debug.DrawLine(endObj.transform.position,endObj.transform.position + endRb.velocity - endOldVel, Color.green);
-            */
         }
         // fr.ApplyAccelerationToTip(particles[0].acc * 1000000000000000000000.0f);
 

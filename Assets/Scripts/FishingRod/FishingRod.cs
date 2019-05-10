@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using GoogleVR.HelloVR;
 using UnityEngine;
 
 public class FishingRod : MonoBehaviour
@@ -10,6 +11,8 @@ public class FishingRod : MonoBehaviour
     private GameObject FollowRod;
 
     private GameObject controller;
+
+    [SerializeField] private Transform placedLocation;
 
     [HideInInspector] public bool pickedup = false;
 
@@ -34,6 +37,8 @@ public class FishingRod : MonoBehaviour
 
     private void Awake()
     {
+        if (placedLocation == null) placedLocation = transform;
+        drop();
         fl = GetComponentInChildren<FishingLine>();
         
         RigidRod = transform.Find("handle").Find("RigidRod").gameObject;
@@ -110,6 +115,12 @@ public class FishingRod : MonoBehaviour
             {
                 release(Time.deltaTime);
             }
+
+            if (Input.GetKeyDown("c"))
+            {
+                Debug.Log("drpopping rod");
+                drop();
+            }
         } else
         {
             transform.position = startpos;
@@ -175,4 +186,11 @@ public class FishingRod : MonoBehaviour
     }
 
     public void grab() { pickedup = true;  }
+
+    public void drop()
+    {
+        pickedup = false;
+        
+        if(placedLocation!=null) transform.GetComponentInChildren<ObjectController>().transform.SetPositionAndRotation(placedLocation.position, placedLocation.rotation);
+    }
 }

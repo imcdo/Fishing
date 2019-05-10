@@ -42,9 +42,13 @@ public class GameManager : MonoBehaviour
         {
             records.Add(fish, 0);
         }
+        bobLured = false;
+    }
+
+    private void Start()
+    {
         bob = GameObject.FindGameObjectWithTag("bob").GetComponent<Bob>();
         fishingLog = GameObject.FindGameObjectWithTag("log").GetComponent<FishingLog>();
-        bobLured = false;
     }
 
     // Update is called once per frame
