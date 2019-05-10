@@ -160,7 +160,7 @@ public class FishingRod : MonoBehaviour
     {
         // amount *= releaseSpeed;
 //        Debug.Log(fl.getTipVelocity() + " " + Vector3.Magnitude(fl.getTipVelocity()));
-        fl.lineLength += Vector3.Magnitude(fl.getTipVelocity());
+        fl.lineLength += Vector3.Magnitude(fl.getTipVelocity() /1.5f);
     }
 
     public void ApplyAccelerationToTip(Vector3 acc)

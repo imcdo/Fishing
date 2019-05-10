@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bob : MonoBehaviour
 {
-    public const float viscoscity = 4.0f;
+    public float viscoscity = 4.0f;
     public const float buoyancy = 25.0f;
     Rigidbody rb;
     BoxCollider bc;

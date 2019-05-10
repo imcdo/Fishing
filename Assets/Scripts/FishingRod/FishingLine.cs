@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class FishingLine : MonoBehaviour
@@ -53,6 +54,8 @@ public class FishingLine : MonoBehaviour
         {
             particles.Add(new LineParticle());
         }
+        Rigidbody endRb = endObj.GetComponent<Rigidbody>();
+        if (endObj != null && endRb != null) endObj.transform.position = particles[numLineParticles - 1].pos;
     }
 
     // Start is called before the first frame update
@@ -72,7 +75,7 @@ public class FishingLine : MonoBehaviour
     
         for (int i = 0; i < numLineParticles; i++)
         {
-            Debug.DrawLine(particles[i].pos,particles[i].pos + particles[i].acc, Color.red);
+//            Debug.DrawLine(particles[i].pos,particles[i].pos + particles[i].acc, Color.red);
             lr.SetPosition(i, particles[i].pos);
         }
 
@@ -122,11 +125,10 @@ public class FishingLine : MonoBehaviour
             particles[i].acc = lineWeight *  gravity;
             Verlet(particles[i], Time.fixedDeltaTime);
             PoleConstraint(particles[i - 1], particles[i],  lineLength/ (1.0f * numLineParticles) );
-            Debug.DrawLine(particles[i].pos, particles[i].pos + particles[i].acc, Color.red);
         }
         particles[numLineParticles - 1].acc = lineWeight * gravity;
 
-        particles[0].pos = endPos;
+//        particles[0].pos = endPos;
 
         prevLineLength = lineLength;
         timestep = Time.fixedDeltaTime;
@@ -135,11 +137,24 @@ public class FishingLine : MonoBehaviour
         Rigidbody endRb = endObj.GetComponent<Rigidbody>();
         if (endObj != null && endRb != null)
         {
+            LineParticle last = particles[numLineParticles - 1];
+            last.acc =  (endRb.velocity - endOldVel) / Time.fixedDeltaTime;
+            Verlet(last, Time.fixedDeltaTime);
+            PoleConstraint(particles[numLineParticles - 2],  last,  lineLength/ (1.0f * numLineParticles) );
+            endObj.transform.position = last.pos;
+            endRb.velocity = (last.pos - last.oldPos)/ Time.fixedDeltaTime;
+            endOldVel = endRb.velocity;
+            Debug.DrawLine(last.pos,     last.pos + last.acc, Color.red);
+            Debug.DrawLine(endRb.position, endRb.position + endRb.velocity / Time.fixedDeltaTime , Color.blue);
+
+            /*
             // get dat acceleration
 //            last.acc = Vector3.Project(last.acc, Vector3.up);
 //            Debug.Log(last.acc);
             LineParticle last = particles[particles.Count - 1];
             last.acc = (endRb.velocity - endOldVel) / Time.fixedDeltaTime;
+//            last.acc = gravity * lineWeight;
+
 //            last.acc = gravity;
             // normal sim shit
             Vector3 p1diff, p2diff;
@@ -157,6 +172,7 @@ public class FishingLine : MonoBehaviour
             endRb.velocity = (last.pos - last.oldPos);
             Debug.Log(endRb.velocity);
             Debug.DrawLine(endObj.transform.position,endObj.transform.position + endRb.velocity - endOldVel, Color.green);
+            */
         }
         // fr.ApplyAccelerationToTip(particles[0].acc * 1000000000000000000000.0f);
 
@@ -190,9 +206,9 @@ public class FishingLine : MonoBehaviour
 
         float diff = (deltaLength - restLength)/deltaLength;
         Vector3 oldPos1 = p1.pos;
-        p1.pos += delta*diff*dampFactor;
-        
         Vector3 oldPos2 = p2.pos;
+
+        p1.pos += delta*diff*dampFactor;
         p2.pos -= delta*diff*dampFactor;
 
         p1Change = (p1.pos - oldPos1);
@@ -205,3 +221,5 @@ public class FishingLine : MonoBehaviour
         return (particles[particles.Count - 1].pos - particles[particles.Count - 1].oldPos);
     }
 }
+
+

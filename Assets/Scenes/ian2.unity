@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6556368, g: 0.90388167, b: 1.1768017, a: 1}
+  m_IndirectSpecularColor: {r: 0.64501214, g: 0.89388716, b: 1.1776813, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1396,6 +1396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd3778750efebe4c89c04220689370a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  viscoscity: 10
   caught: 0
 --- !u!65 &179437770
 BoxCollider:
@@ -4410,6 +4411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amago0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dd89d12bbf7946c4db1ef6f9c0414468, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dd89d12bbf7946c4db1ef6f9c0414468, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.12
@@ -5217,6 +5222,18 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
+      propertyPath: floater
+      value: 
+      objectReference: {fileID: 179437767}
+    - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
+      propertyPath: endObj
+      value: 
+      objectReference: {fileID: 179437767}
+    - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
+      propertyPath: lineWeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1585829792686326658, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -5246,18 +5263,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
-      propertyPath: floater
-      value: 
-      objectReference: {fileID: 179437767}
-    - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
-      propertyPath: endObj
-      value: 
-      objectReference: {fileID: 179437767}
-    - target: {fileID: 767594945, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
-      propertyPath: lineWeight
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8fae2bcd6adb5d4a8cec6ccb9009b52, type: 3}
